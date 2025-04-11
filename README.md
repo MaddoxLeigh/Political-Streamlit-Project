@@ -4,7 +4,7 @@ An interactive data visualization platform designed to make political data more 
 
 ## Project Overview
 
-As a Politics and Data Science student at LSE, I created this platform to address a common challenge: political data is often stored in formats that are difficult to interpret, such as regression tables or complex Excel files. This tool makes finding and analyzing data for essays and research much more efficient.
+This platform is to address a common challenge: political data is often stored in formats that are difficult to interpret, such as regression tables or complex Excel files. This tool makes finding and analyzing data for essays and research much more efficient.
 
 ### Key Features:
 - Interactive correlation graphs with real-time data
