@@ -4,7 +4,7 @@ An interactive data visualization platform designed to make political data more 
 
 ## Project Overview
 
-This platform is to address a common challenge: political data is often stored in formats that are difficult to interpret, such as regression tables or complex Excel files. This tool makes finding and analyzing data for essays and research much more efficient.
+As a Politics and Data Science student at LSE, I created this platform to address a common challenge: political data is often stored in formats that are difficult to interpret, such as regression tables or complex Excel files. This tool makes finding and analyzing data for essays and research much more efficient.
 
 ### Key Features:
 - Interactive correlation graphs with real-time data
@@ -21,20 +21,42 @@ This platform is to address a common challenge: political data is often stored i
    pip install -r requirements.txt
    ```
 3. Run the notebooks in order to generate necessary datasets
-4. Launch the web interface:
+4. Create the database:
+   ```bash
+   python3 create_db.py
+   ```
+5. Launch the web interface:
    ```bash
    streamlit run webstream.py
    ```
+
+## Database Setup
+
+The project uses a SQLite database to store and manage the data. The database is created using the following steps:
+
+1. All required CSV files are stored in the `docs/Data/` directory
+2. The database creation script (`create_db.py`) reads these CSV files and creates the following tables:
+   - State Data
+   - Biden polls
+   - Biden Events
+   - Interactive Data
+   - UK crime rates
+   - London crime categories
+   - Global population
+   - Global gini
+
+The database file (`PoliticsandDataSci.db`) will be created in the `docs/Data/` directory.
 
 ## Project Structure
 
 ```
 .
 ├── docs/
-│   └── Notebooks/          # Analysis notebooks
-├── Data/                   # Generated datasets
-├── requirements.txt        # Project dependencies
-└── webstream.py           # Streamlit web application
+│   ├── Data/                   # Data files and database
+│   └── Notebooks/              # Analysis notebooks
+├── requirements.txt            # Project dependencies
+├── webstream.py               # Streamlit web application
+└── create_db.py               # Database creation script
 ```
 
 ## Data Processing
@@ -42,7 +64,7 @@ This platform is to address a common challenge: political data is often stored i
 The project uses a series of Jupyter notebooks to process and prepare data:
 1. Run notebooks in sequential order
 2. Each notebook generates CSV files in the Data folder
-3. Final notebook creates the database for the website
+3. Run create_db.py to create the database
 4. Launch the Streamlit interface to interact with the processed data
 
 ## Data Sources
